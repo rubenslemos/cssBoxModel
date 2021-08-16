@@ -1,0 +1,196 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+div.cabeca {
+    display: flex;
+    background-color: rgba(0, 255, 255, .4);
+    align-items: center;
+    justify-content: center;
+    /* Content: Width & height */
+    width: 150px;
+    height: 150px;
+    /* impede rolagem */
+    overflow: hidden;
+    border: 8px double darkcyan;
+    border-radius: 350px;
+    box-shadow: 1px 1px .8rem rgba(0, 0, 138, .4);
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+section.cabeca {
+    font-size: 26px;
+    background-color: lightgrey;
+    width: 500px;
+    height: 250px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 500px;
+    overflow: hidden;
+    border: 8px solid darkcyan;
+    border-radius: 350px;
+    box-shadow: 1px 1px .8rem darkblue;
+    /* margin: auto; */
+    margin-bottom: 10px;
+}
+
+p.cabeca {
+    background-color: rgba(0, 0, 0, .7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Content: Width & height */
+    width: 25px;
+    height: 25px;
+    border-radius: 350px;
+    /* impede rolagem */
+    overflow: hidden;
+    box-shadow: 1px 1px .5rem darkblue;
+    margin-left: 30px;
+    margin-right: 30px;
+    transition: .5s;
+}
+
+p.cabeca:hover {
+    background-color: red;
+    margin-right: 0;
+    margin-bottom: 10px;
+    opacity: .5;
+}
+
+section.barriga {
+    border-radius: 50px;
+    background-color: lightgrey;
+    border: 8px solid darkcyan;
+    box-shadow: 1px 1px .8rem darkblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Content: Width & height */
+    width: 350px;
+    height: 300px;
+    /* margin: auto; */
+}
+
+div.barriga {
+    border-radius: 20px;
+    background-color: lightgrey;
+    border: 8px solid darkcyan;
+    box-shadow: 1px 1px .8rem darkblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Content: Width & height */
+    width: 200px;
+    height: 150px;
+    /* margin: auto; */
+}
+
+p.barriga {
+    border-radius: 15px;
+    background-color: lightgrey;
+    border: 8px solid darkcyan;
+    box-shadow: 1px 1px .8rem darkblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Content: Width & height */
+    width: 100px;
+    height: 25px;
+    /* margin: auto; */
+}
+
+section.pes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    /* margin: auto; */
+}
+
+div.pes {
+    border-radius: 20px;
+    background-color: lightgrey;
+    border: 8px solid darkcyan;
+    box-shadow: 1px 1px .8rem darkblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Content: Width & height */
+    width: 65px;
+    height: 200px;
+    /* margin: auto; */
+    margin-top: 6px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+section.braco {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    /* margin: auto; */
+}
+
+div.bracoe {
+    border-radius: 20px;
+    background-color: lightgrey;
+    border: 8px solid darkcyan;
+    box-shadow: 1px 1px .8rem darkblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 200px;
+    margin: auto;
+    transform: rotate(45deg) translate(.5rem, .55rem);
+    z-index: -1;
+}
+
+div.bracod {
+    border-radius: 20px;
+    background-color: lightgrey;
+    border: 8px solid darkcyan;
+    box-shadow: 1px 1px .8rem darkblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 200px;
+    margin: auto;
+    transform: rotate(-45deg) translate(-.55rem, .65rem);
+    z-index: -1;
+}
+
+
+/*  
+===========================================================================================================
+Margin: Margem
+segue as mesmas ideias do padding na sintaxe podendo ser escrita tanto com um comando margin: ; pondo entre o : e o ; de 1 a 4 valores e isso define o q cada um desses valores afetará ou pode ser escrito especificando qual lado receberá a margem, só que enquanto o Padding gera uma "margem" dentro da box do objeto, o Margin cria essa margem envolta da box do objeto
+===========================================================================================================
+Border: Borda
+coloca borda nos elementos e configura a formatação e o estilo dessa borda, ex: cor, formato, tipo, espessura.
+===========================================================================================================
+Padding: Preenchimento  
+padding: top right bottom left - 4 elementos
+padding: top (right-left) bottom  - 3 elementos 
+padding: (top-bottom) (right-left) - 2 elementos 
+padding: (top-bottom-left-right) - 1 elemento
+soma o padding ao conteúdo, mas mantendo o tamanho de altura e largura setados para a box diminuindo o tamanho do conteúdo. Exceto se o padding setado ultrapassar o tamanho da box, ai seu comportamento fica igual o da content-box
+box-sizing: border-box;
+soma o padding ao tamanho da box, mantendo o tamanho de altura e largura setados para o conteúdo aumentando o tamanho do box. 
+box-sizing: content-box; 
+===========================================================================================================
+alguns valores de margin, padding, width, height não funcionam quando temos tags com display:inline, pois esse formato de display desabilita essas propriedades para que se mantenha suas características, caso queiramos usar esses valores precisamos mudar ela pra display: inline-block ou inline-flex, assim mantemos as características do inline e adicionamos as características do block e do flex a esse elemento 
+===========================================================================================================
+*/
